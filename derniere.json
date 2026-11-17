@@ -1,7 +1,7 @@
 {
- "version": "1.37.2",
- "notes": "« Ma sélection » plus large, avec le code-barres et le code de chaque produit.",
- "url": "https://raw.githubusercontent.com/flowraison6621/DepotPrint-mises-a-jour/main/DepotPrint_1.37.2.zip",
- "sha256": "f6d21266d14b4e3c7c4a07cb8c7c17d9abe193a7cd2a027f20cc49cadeeda10e",
- "taille": 459322
+ "version": "1.37.3",
+ "notes": "Catégories rangées proprement (même largeur, rangées équilibrées).",
+ "url": "https://raw.githubusercontent.com/flowraison6621/DepotPrint-mises-a-jour/main/DepotPrint_1.37.3.zip",
+ "sha256": "11a151e7fc4efa41ace976b9fc0d80876b70ae34edb34ff1365ecec013ec9ba7",
+ "taille": 459809
 }
