@@ -1,7 +1,7 @@
 {
- "version": "1.37.0",
- "notes": "Catégories en haut de la liste, « Ma sélection » à gauche ; les produits cochés restent à leur place.",
- "url": "https://raw.githubusercontent.com/flowraison6621/DepotPrint-mises-a-jour/main/DepotPrint_1.37.0.zip",
- "sha256": "35485249533566583da4668cc78bf4e88377f9395aa6f5790628be94af2b2282",
- "taille": 458205
+ "version": "1.37.1",
+ "notes": "Noms entiers (jamais un mot seul à la ligne) et codes-barres dans la liste.",
+ "url": "https://raw.githubusercontent.com/flowraison6621/DepotPrint-mises-a-jour/main/DepotPrint_1.37.1.zip",
+ "sha256": "7280010a310a51220bc7a2f9e8e97305a27d31ca2b5e2cfdc2ec2e8d867be176",
+ "taille": 459070
 }
