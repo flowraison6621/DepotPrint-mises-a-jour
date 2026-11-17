@@ -1,7 +1,7 @@
 {
- "version": "1.36.0",
- "notes": "Parcourir plus clair : 2 produits sur la même affiche, bouton Modifier, miniatures des étiquettes énergie, pointillés sous le code et le nom.",
- "url": "https://raw.githubusercontent.com/flowraison6621/DepotPrint-mises-a-jour/main/DepotPrint_1.36.0.zip",
- "sha256": "3a2ac5aa7be2017ae5f3462aeec2651a35a106ae575137b2db123b35f16bcf0c",
- "taille": 451217
+ "version": "1.36.1",
+ "notes": "Boutons Modifier et Fusionner sur la ligne du produit, aperçu de la feuille A4 en entier.",
+ "url": "https://raw.githubusercontent.com/flowraison6621/DepotPrint-mises-a-jour/main/DepotPrint_1.36.1.zip",
+ "sha256": "6b57acd7baea7935b83fa327b25b8d4366bb8dfea9fca4c76db7aad44fdcab44",
+ "taille": 453550
 }
