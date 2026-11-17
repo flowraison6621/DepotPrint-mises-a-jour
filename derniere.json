@@ -1,7 +1,7 @@
 {
- "version": "1.36.7",
- "notes": "Les produits cochés montent en haut de la liste.",
- "url": "https://raw.githubusercontent.com/flowraison6621/DepotPrint-mises-a-jour/main/DepotPrint_1.36.7.zip",
- "sha256": "78cc46a15551ca7e0466795711f08c3f10dcc90cbd4c15cc9e5903739d4ff805",
- "taille": 455343
+ "version": "1.36.8",
+ "notes": "« Ma sélection » sous les catégories (produits cochés, produits fusionnés) ; chaque produit reste dans sa catégorie.",
+ "url": "https://raw.githubusercontent.com/flowraison6621/DepotPrint-mises-a-jour/main/DepotPrint_1.36.8.zip",
+ "sha256": "66befe43bad31116766b4d38346580a410e97066b8f61c88002744958674a25c",
+ "taille": 456315
 }
