@@ -1,7 +1,7 @@
 {
- "version": "1.36.3",
- "notes": "Correction : après « Séparer », les anciens boutons restaient affichés.",
- "url": "https://raw.githubusercontent.com/flowraison6621/DepotPrint-mises-a-jour/main/DepotPrint_1.36.3.zip",
- "sha256": "96b9d4a1bfe7f25a74954661f7c9c3a952c02980256df65a0e122b5546c497bf",
- "taille": 454428
+ "version": "1.36.4",
+ "notes": "Le bouton « Rechercher une mise à jour » voit une nouvelle version tout de suite.",
+ "url": "https://raw.githubusercontent.com/flowraison6621/DepotPrint-mises-a-jour/main/DepotPrint_1.36.4.zip",
+ "sha256": "8128d99e8fab84b2f02e06cfca249aaa0837b30caf52f95a4130373eaf9ba02d",
+ "taille": 454573
 }
