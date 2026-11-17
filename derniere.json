@@ -1,7 +1,7 @@
 {
- "version": "1.36.9",
- "notes": "Décocher un produit fusionné défait la fusion ; « Tout décocher » vide tout.",
- "url": "https://raw.githubusercontent.com/flowraison6621/DepotPrint-mises-a-jour/main/DepotPrint_1.36.9.zip",
- "sha256": "df20d92968c79a052f7e204b682709e953dc63bc06535465332b47949b7c7b32",
- "taille": 456456
+ "version": "1.37.0",
+ "notes": "Catégories en haut de la liste, « Ma sélection » à gauche ; les produits cochés restent à leur place.",
+ "url": "https://raw.githubusercontent.com/flowraison6621/DepotPrint-mises-a-jour/main/DepotPrint_1.37.0.zip",
+ "sha256": "35485249533566583da4668cc78bf4e88377f9395aa6f5790628be94af2b2282",
+ "taille": 458205
 }
