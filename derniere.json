@@ -1,7 +1,7 @@
 {
- "version": "1.36.5",
- "notes": "Le bouton « Rechercher une mise à jour » voit une nouvelle version tout de suite.",
- "url": "https://raw.githubusercontent.com/flowraison6621/DepotPrint-mises-a-jour/main/DepotPrint_1.36.5.zip",
- "sha256": "21af8088773cf0bbd10274bec17b91c9eec173ff06181c05d3699cbf23b7680e",
- "taille": 454630
+ "version": "1.36.6",
+ "notes": "Produits fusionnés toujours en haut de la liste (gardés à la fermeture), fusion seulement entre produits de la même famille.",
+ "url": "https://raw.githubusercontent.com/flowraison6621/DepotPrint-mises-a-jour/main/DepotPrint_1.36.6.zip",
+ "sha256": "9921783d54c398df10fd9e1fd0c49ee77f32bea4b9934eaf6be5b834c184c04b",
+ "taille": 455041
 }
