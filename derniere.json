@@ -1,7 +1,7 @@
 {
- "version": "1.36.2",
- "notes": "Bouton « Rechercher une mise à jour » sur l'écran d'accueil.",
- "url": "https://raw.githubusercontent.com/flowraison6621/DepotPrint-mises-a-jour/main/DepotPrint_1.36.2.zip",
- "sha256": "7707ef45929219182006228e7fd684ce82a07416ee91f0b087c87413c4378119",
- "taille": 454269
+ "version": "1.36.3",
+ "notes": "Correction : après « Séparer », les anciens boutons restaient affichés.",
+ "url": "https://raw.githubusercontent.com/flowraison6621/DepotPrint-mises-a-jour/main/DepotPrint_1.36.3.zip",
+ "sha256": "96b9d4a1bfe7f25a74954661f7c9c3a952c02980256df65a0e122b5546c497bf",
+ "taille": 454428
 }
