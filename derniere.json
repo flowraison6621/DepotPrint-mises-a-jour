@@ -1,7 +1,7 @@
 {
- "version": "1.37.1",
- "notes": "Noms entiers (jamais un mot seul à la ligne) et codes-barres dans la liste.",
- "url": "https://raw.githubusercontent.com/flowraison6621/DepotPrint-mises-a-jour/main/DepotPrint_1.37.1.zip",
- "sha256": "7280010a310a51220bc7a2f9e8e97305a27d31ca2b5e2cfdc2ec2e8d867be176",
- "taille": 459070
+ "version": "1.37.2",
+ "notes": "« Ma sélection » plus large, avec le code-barres et le code de chaque produit.",
+ "url": "https://raw.githubusercontent.com/flowraison6621/DepotPrint-mises-a-jour/main/DepotPrint_1.37.2.zip",
+ "sha256": "f6d21266d14b4e3c7c4a07cb8c7c17d9abe193a7cd2a027f20cc49cadeeda10e",
+ "taille": 459322
 }
