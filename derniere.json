@@ -1,7 +1,7 @@
 {
- "version": "1.36.6",
- "notes": "Produits fusionnés toujours en haut de la liste (gardés à la fermeture), fusion seulement entre produits de la même famille.",
- "url": "https://raw.githubusercontent.com/flowraison6621/DepotPrint-mises-a-jour/main/DepotPrint_1.36.6.zip",
- "sha256": "9921783d54c398df10fd9e1fd0c49ee77f32bea4b9934eaf6be5b834c184c04b",
- "taille": 455041
+ "version": "1.36.7",
+ "notes": "Les produits cochés montent en haut de la liste.",
+ "url": "https://raw.githubusercontent.com/flowraison6621/DepotPrint-mises-a-jour/main/DepotPrint_1.36.7.zip",
+ "sha256": "78cc46a15551ca7e0466795711f08c3f10dcc90cbd4c15cc9e5903739d4ff805",
+ "taille": 455343
 }
