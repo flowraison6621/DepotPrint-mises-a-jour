@@ -1,7 +1,7 @@
 {
- "version": "1.36.1",
- "notes": "Boutons Modifier et Fusionner sur la ligne du produit, aperçu de la feuille A4 en entier.",
- "url": "https://raw.githubusercontent.com/flowraison6621/DepotPrint-mises-a-jour/main/DepotPrint_1.36.1.zip",
- "sha256": "6b57acd7baea7935b83fa327b25b8d4366bb8dfea9fca4c76db7aad44fdcab44",
- "taille": 453550
+ "version": "1.36.2",
+ "notes": "Bouton « Rechercher une mise à jour » sur l'écran d'accueil.",
+ "url": "https://raw.githubusercontent.com/flowraison6621/DepotPrint-mises-a-jour/main/DepotPrint_1.36.2.zip",
+ "sha256": "7707ef45929219182006228e7fd684ce82a07416ee91f0b087c87413c4378119",
+ "taille": 454269
 }
