@@ -1,7 +1,7 @@
 {
- "version": "1.37.4",
- "notes": "Relevé : « Ma sélection » à gauche et listes en haut ; produits fusionnés : 🔗 et ✏️ entre les deux.",
- "url": "https://raw.githubusercontent.com/flowraison6621/DepotPrint-mises-a-jour/main/DepotPrint_1.37.4.zip",
- "sha256": "16e021e1bbc74f639f83211b2322c5faf9b49037e2ba3f08ba82dace916539f5",
- "taille": 462095
+ "version": "1.37.5",
+ "notes": "Ma sélection : ✏️ et 🔗 Fusionner au passage de la souris ; relevé : une seule sélection pour toutes les listes.",
+ "url": "https://raw.githubusercontent.com/flowraison6621/DepotPrint-mises-a-jour/main/DepotPrint_1.37.5.zip",
+ "sha256": "14cd7843513a74f1c79fba711bbb73c434b4413a3bd5484af3b16611aa373701",
+ "taille": 463297
 }
