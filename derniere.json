@@ -1,7 +1,7 @@
 {
- "version": "1.37.3",
- "notes": "Catégories rangées proprement (même largeur, rangées équilibrées).",
- "url": "https://raw.githubusercontent.com/flowraison6621/DepotPrint-mises-a-jour/main/DepotPrint_1.37.3.zip",
- "sha256": "11a151e7fc4efa41ace976b9fc0d80876b70ae34edb34ff1365ecec013ec9ba7",
- "taille": 459809
+ "version": "1.37.4",
+ "notes": "Relevé : « Ma sélection » à gauche et listes en haut ; produits fusionnés : 🔗 et ✏️ entre les deux.",
+ "url": "https://raw.githubusercontent.com/flowraison6621/DepotPrint-mises-a-jour/main/DepotPrint_1.37.4.zip",
+ "sha256": "16e021e1bbc74f639f83211b2322c5faf9b49037e2ba3f08ba82dace916539f5",
+ "taille": 462095
 }
