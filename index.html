@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Dépôt Prix</title>
+<meta name="theme-color" content="#E68A00">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Dépôt Prix">
+<meta name="robots" content="noindex, nofollow">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icones/icone-192.png">
+<link rel="apple-touch-icon" href="icones/apple-touch-icon.png">
+<style>
+@font-face { font-family: Titre; src: url(polices/big_shoulders_extrabold.ttf); font-display: swap; }
+:root {
+  --orange: #E68A00; --orange-pale: #FFF4E0; --encre: #1A1A1A; --gris: #6B6B6B; --fond: #F6F6F6;
+  --vert: #1E7B3A; --rouge: #C62828; --bleu: #1565C0; --brun: #9A5B00; --trait: #DDDDDD;
+}
+* { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+html, body { margin: 0; height: 100%; }
+body { background: var(--fond); color: var(--encre); font: 16px/1.35 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; overscroll-behavior-y: none; }
+button { font: inherit; color: inherit; border: 0; background: none; cursor: pointer; }
+input { font: inherit; }
+.ecran { display: none; min-height: 100%; flex-direction: column; }
+.ecran.actif { display: flex; }
+.entete { background: var(--orange); color: #fff; padding: calc(env(safe-area-inset-top) + 14px) 16px 14px; display: flex; align-items: center; gap: 6px; position: sticky; top: 0; z-index: 5; }
+.entete .titre { font-family: Titre, Impact, sans-serif; font-size: 32px; line-height: 1; letter-spacing: .3px; }
+.entete .sous { font-size: 14px; opacity: .92; margin-top: 4px; white-space: pre-line; }
+.entete .fill { flex: 1; min-width: 0; }
+.retour, .fermer { width: 44px; height: 44px; display: grid; place-items: center; color: #fff; font-size: 26px; margin-left: -8px; }
+.fermer { margin: 0 -6px 0 0; font-size: 28px; }
+.contenu { flex: 1; padding: 16px; padding-bottom: calc(16px + env(safe-area-inset-bottom)); }
+.bas { background: #fff; padding: 16px; padding-bottom: calc(16px + env(safe-area-inset-bottom)); position: sticky; bottom: 0; box-shadow: 0 -1px 0 var(--trait); }
+.btn { display: flex; align-items: center; justify-content: center; gap: 10px; width: 100%; min-height: 58px; border-radius: 14px; font-weight: 700; font-size: 18px; padding: 10px 14px; text-align: center; }
+.btn.plein { background: var(--orange); color: #fff; }
+.btn.vide { background: #fff; border: 1.5px solid var(--trait); color: var(--encre); font-weight: 600; font-size: 17px; }
+.btn:disabled { opacity: .5; }
+.btn + .btn, .ligne-btn + .btn, .btn + .ligne-btn { margin-top: 10px; }
+.ligne-btn { display: flex; gap: 10px; }
+.ligne-btn .btn { margin: 0; }
+h2 { font-size: 20px; margin: 28px 0 0; }
+.aide { font-size: 13px; color: var(--gris); margin: 2px 0 10px; }
+.carte { background: #fff; border-radius: 12px; padding: 14px; margin-bottom: 8px; }
+.carte.doute { background: var(--orange-pale); border: 1.5px solid var(--orange); }
+.carte .nom { font-weight: 700; font-size: 16px; }
+.carte .detail { display: flex; align-items: baseline; gap: 8px; margin-top: 4px; }
+.carte .code { font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 15px; flex: 1; }
+.barre { text-decoration: line-through; color: var(--gris); font-size: 13px; }
+.prix { font-weight: 800; font-size: 17px; }
+.alerte { color: var(--brun); font-size: 13px; font-weight: 700; margin-top: 6px; white-space: pre-line; }
+.pastille { display: inline-block; border-radius: 99px; padding: 2px 10px; font-size: 13px; font-weight: 700; white-space: nowrap; }
+.p-BAISSE { background: #E3F4E8; color: var(--vert); } .p-HAUSSE { background: #FDE8E8; color: var(--rouge); }
+.p-NOUVEAU { background: #E3EFFC; color: var(--bleu); } .p-STATUT { background: #ECECEC; color: #4A4A4A; }
+.feuille-liste { display: flex; align-items: center; gap: 8px; }
+.feuille-liste .txt { flex: 1; min-width: 0; }
+.feuille-liste .t { font-weight: 700; font-size: 17px; }
+.feuille-liste .s { color: var(--gris); font-size: 14px; }
+.ok { color: var(--vert); font-weight: 700; font-size: 13px; white-space: nowrap; }
+.poubelle { width: 40px; height: 40px; display: grid; place-items: center; color: #aaa; font-size: 20px; }
+.vide-txt { background: #fff; border-radius: 12px; padding: 18px; color: var(--gris); }
+.installer { background: #fff; border-radius: 12px; padding: 14px; margin-top: 24px; font-size: 14px; color: #444; border: 1.5px dashed var(--trait); }
+.installer b { color: var(--encre); }
+.resume { font-size: 15px; color: var(--gris); padding: 10px 16px 0; }
+.resume.attention { color: var(--brun); }
+.reglage { background: #fff; border-radius: 12px; padding: 14px; display: flex; align-items: center; gap: 12px; margin-top: 14px; }
+.reglage .txt { flex: 1; }
+.reglage .ex { font-family: ui-monospace, Menlo, monospace; font-size: 13px; color: var(--gris); }
+.interrupteur { width: 52px; height: 32px; border-radius: 99px; background: #ccc; position: relative; flex: none; transition: background .15s; }
+.interrupteur::after { content: ''; position: absolute; width: 26px; height: 26px; border-radius: 50%; background: #fff; top: 3px; left: 3px; transition: left .15s; box-shadow: 0 1px 2px #0003; }
+.interrupteur.on { background: var(--orange); } .interrupteur.on::after { left: 23px; }
+.lien { color: var(--encre); font-weight: 600; padding: 12px 0; display: inline-block; }
+/* aperçu de la feuille */
+.apercu { background: #fff; border: 1px solid var(--trait); border-radius: 6px; padding: 14px 12px; }
+.apercu .t1 { color: var(--orange); font-weight: 800; font-size: 15px; }
+.apercu .t2 { font-size: 11px; color: #555; }
+.apercu hr { border: 0; border-top: 2px solid var(--orange); margin: 8px 0; }
+.apercu .rang { display: flex; align-items: center; gap: 8px; padding: 6px 0; border-bottom: 1px solid #eee; font-size: 11px; }
+.apercu .rang .n { flex: 1; font-weight: 700; min-width: 0; }
+.apercu .rang svg { width: 92px; height: 26px; flex: none; }
+.apercu .rang .p { width: 58px; text-align: right; font-weight: 800; }
+.apercu .plus { font-size: 12px; color: var(--gris); padding-top: 8px; text-align: center; }
+/* scanner */
+.selecteur { display: flex; align-items: center; gap: 10px; margin-top: 10px; }
+.selecteur .lab { font-weight: 700; font-size: 14px; white-space: nowrap; }
+.selecteur .choix { flex: 1; display: flex; background: rgba(0,0,0,.15); border-radius: 11px; padding: 3px; }
+.selecteur .choix button { flex: 1; color: #fff; font-weight: 800; font-size: 16px; padding: 7px 0; border-radius: 9px; }
+.selecteur .choix button.sel { background: #fff; color: var(--orange); }
+.progression { height: 5px; background: #FFE2B3; } .progression div { height: 5px; background: var(--vert); transition: width .2s; }
+.liste-scan { flex: 1; overflow-y: auto; padding: 8px; -webkit-overflow-scrolling: touch; }
+.cscan { background: #fff; border-radius: 12px; margin-bottom: 8px; padding: 12px 14px; display: flex; flex-direction: column; }
+.cscan.fait { background: #F3FAF5; } .cscan.doute:not(.fait) { background: var(--orange-pale); border: 2px solid var(--orange); }
+.cscan .haut { display: flex; gap: 8px; align-items: flex-start; }
+.cscan .nom { flex: 1; font-weight: 800; color: var(--encre); overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+.coche { width: 44px; height: 44px; margin: -6px -6px 0 0; display: grid; place-items: center; flex: none; }
+.coche span { width: 32px; height: 32px; border-radius: 50%; border: 2px solid #C8C8C8; display: grid; place-items: center; color: #fff; font-weight: 800; }
+.fait .coche span { background: var(--vert); border-color: var(--vert); }
+.cscan .prixl { display: flex; align-items: center; gap: 8px; margin-top: 2px; }
+.cscan .zone { flex: 1; min-height: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; margin-top: 6px; }
+.fait .zone { opacity: .45; }
+.cscan .zone svg { width: 88%; flex: 1; min-height: 20px; }
+.cscan .num { font-family: ui-monospace, Menlo, monospace; font-weight: 700; letter-spacing: 2px; }
+/* fenêtres */
+.voile { position: fixed; inset: 0; background: rgba(0,0,0,.45); display: none; align-items: center; justify-content: center; padding: 22px; z-index: 50; }
+.voile.ouvert { display: flex; }
+.fenetre { background: #fff; border-radius: 22px; padding: 22px; width: 100%; max-width: 420px; max-height: 90vh; overflow: auto; }
+.fenetre h3 { margin: 0 0 12px; font-size: 20px; }
+.fenetre p { margin: 0; color: #444; white-space: pre-line; }
+.fenetre .actions { display: flex; justify-content: flex-end; align-items: center; gap: 8px; margin-top: 20px; flex-wrap: wrap; }
+.fenetre .actions button { padding: 10px 16px; border-radius: 99px; font-weight: 700; white-space: nowrap; }
+.fenetre .actions .principal { background: var(--orange); color: #fff; }
+.fenetre .actions .second { color: var(--gris); }
+.fenetre .actions .danger { color: var(--rouge); margin-right: auto; padding-left: 0; }
+.champ { display: block; margin-top: 12px; }
+.champ span { display: block; font-size: 13px; color: var(--gris); margin-bottom: 4px; }
+.champ input { width: 100%; padding: 12px; border: 1.5px solid #ccc; border-radius: 10px; font-size: 17px; }
+.champ input.erreur { border-color: var(--rouge); }
+.deux { display: flex; gap: 8px; } .deux .champ { flex: 1; }
+.attente { text-align: center; }
+.roue { width: 44px; height: 44px; border: 4px solid #FFE2B3; border-top-color: var(--orange); border-radius: 50%; margin: 4px auto 16px; animation: tourne 1s linear infinite; }
+@keyframes tourne { to { transform: rotate(360deg); } }
+.attente .etape { font-weight: 700; font-size: 17px; }
+.attente .patience { color: var(--gris); font-size: 14px; margin-top: 8px; }
+/* code d'accès */
+.acces { max-width: 420px; margin: 0 auto; width: 100%; }
+.acces p { color: #444; }
+.erreur-txt { color: var(--rouge); font-size: 14px; min-height: 20px; margin-top: 6px; }
+.termine { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 24px; }
+.termine .rond { width: 110px; height: 110px; border-radius: 50%; background: #E3F4E8; color: var(--vert); font-size: 56px; display: grid; place-items: center; }
+.termine .grand { font-size: 22px; font-weight: 800; margin-top: 20px; }
+.termine .petit { color: var(--gris); margin-top: 8px; }
+/* impression : la feuille A4 seule */
+#impression { display: none; }
+@media print {
+  @page { size: A4; margin: 0; }
+  body { background: #fff; }
+  body > *:not(#impression) { display: none !important; }
+  #impression { display: block; }
+  .page { width: 210mm; height: 296mm; padding: 14mm; position: relative; page-break-after: always; font-family: Arial, Helvetica, sans-serif; color: #191919; }
+  .page:last-child { page-break-after: auto; }
+  .page .h1 { color: #E68A00; font-weight: 800; font-size: 18pt; }
+  .page .h2 { font-size: 10pt; color: #3c3c3c; margin-top: 1mm; }
+  .page .hd { position: absolute; right: 14mm; top: 14mm; text-align: right; font-size: 9pt; color: #5a5a5a; line-height: 1.5; }
+  .page .filet { height: 0.8mm; background: #E68A00; margin: 3mm 0 3mm; }
+  .page .cols { display: flex; background: #FFF4E0; font-size: 7.5pt; font-weight: 700; color: #646464; padding: 2mm; }
+  .page .rg { display: flex; align-items: center; height: 21.5mm; border-bottom: 0.3mm solid #d7d7d7; padding: 0 2mm; }
+  .page .c1 { width: 88mm; font-weight: 700; font-size: 11pt; line-height: 1.2; }
+  .page .c2 { width: 52mm; text-align: center; }
+  .page .c2 svg { width: 44mm; height: 11mm; display: block; margin: 0 auto; }
+  .page .c2 .num { font-family: "Courier New", monospace; font-weight: 700; font-size: 9pt; margin-top: 1mm; }
+  .page .c3 { flex: 1; text-align: right; }
+  .page .cols .c1 { font-size: 7.5pt; }
+  .page .c3 .anc { text-decoration: line-through; color: #8c8c8c; font-size: 8pt; }
+  .page .c3 .nv { font-weight: 800; font-size: 14pt; }
+  .page .c3 .pastille { font-size: 7.5pt; padding: 0.5mm 2.5mm; }
+  .page .c4 { width: 14mm; display: flex; justify-content: center; }
+  .page .c4 div { width: 6mm; height: 6mm; border: 0.5mm solid #282828; }
+  .page .pied { position: absolute; left: 14mm; right: 14mm; bottom: 8mm; display: flex; justify-content: space-between; font-size: 8pt; color: #828282; }
+  .pastille { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .page .cols, .page .filet { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+}
+</style>
+</head>
+<body>
+
+<!-- Code d'accès -->
+<section class="ecran" id="e-acces">
+  <div class="entete"><div class="fill"><div class="titre">DÉPÔT PRIX</div><div class="sous">Feuille des changements de prix
+avec les codes-barres</div></div></div>
+  <div class="contenu"><div class="acces">
+    <p>Tape le code d'accès du magasin.<br>Il est demandé une seule fois.</p>
+    <label class="champ"><span>Code d'accès</span><input id="code-acces" autocomplete="off" autocapitalize="characters" enterkeyhint="go"></label>
+    <div class="erreur-txt" id="acces-erreur"></div>
+    <button class="btn plein" id="b-acces">Entrer</button>
+  </div></div>
+</section>
+
+<!-- Accueil -->
+<section class="ecran" id="e-accueil">
+  <div class="entete"><div class="fill"><div class="titre">DÉPÔT PRIX</div><div class="sous">Feuille des changements de prix
+avec les codes-barres</div></div></div>
+  <div class="contenu">
+    <button class="btn plein" id="b-photo">📷 Photographier la feuille</button>
+    <button class="btn vide" id="b-galerie">🖼️ Choisir une photo déjà prise</button>
+    <button class="btn vide" id="b-main">✍️ Taper les codes à la main</button>
+    <input type="file" id="f-photo" accept="image/*" capture="environment" hidden>
+    <input type="file" id="f-galerie" accept="image/*" multiple hidden>
+    <h2>Dernières feuilles</h2>
+    <div class="aide">Gardées 7 jours, puis effacées toutes seules.</div>
+    <div id="liste-feuilles"></div>
+    <div class="installer" id="installer" hidden></div>
+  </div>
+</section>
+
+<!-- Vérifier -->
+<section class="ecran" id="e-verifier">
+  <div class="entete"><button class="retour" data-retour>←</button><div class="fill"><div class="titre">VÉRIFIER</div><div class="sous" id="v-sous"></div></div></div>
+  <div class="resume" id="v-resume"></div>
+  <div class="contenu" id="v-liste"></div>
+  <div class="bas"><button class="btn plein" id="b-creer">Créer la feuille à imprimer</button></div>
+</section>
+
+<!-- Feuille prête -->
+<section class="ecran" id="e-feuille">
+  <div class="entete"><button class="retour" data-retour>←</button><div class="fill"><div class="titre">FEUILLE PRÊTE</div><div class="sous" id="f-sous"></div></div></div>
+  <div class="contenu">
+    <div class="apercu" id="apercu"></div>
+    <div class="reglage">
+      <div class="txt"><div><b>Garder les zéros devant le code</b></div><div class="ex" id="ex-zeros"></div></div>
+      <button class="interrupteur" id="t-zeros" aria-label="Garder les zéros"></button>
+    </div>
+    <div class="aide" style="margin-top:8px">Si le téléphone du magasin ne trouve pas l'article,<br>change ce réglage.</div>
+    <button class="lien" id="b-modifier">✏️ Modifier les articles</button>
+  </div>
+  <div class="bas">
+    <button class="btn plein" id="b-scanner">📱 Scanner sur l'écran</button>
+    <div class="ligne-btn">
+      <button class="btn vide" id="b-partager">📤 Partager</button>
+      <button class="btn vide" id="b-imprimer">🖨️ Imprimer</button>
+    </div>
+  </div>
+</section>
+
+<!-- Scanner -->
+<section class="ecran" id="e-scan" style="height:100%">
+  <div class="entete" style="flex-direction:column;align-items:stretch">
+    <div style="display:flex;align-items:center"><div class="fill"><div class="titre">SCANNER</div><div class="sous" id="s-sous"></div></div><button class="fermer" id="b-fermer-scan">✕</button></div>
+    <div class="selecteur"><div class="lab">Codes par écran</div><div class="choix" id="choix-n"></div></div>
+  </div>
+  <div class="progression"><div id="s-prog"></div></div>
+  <div class="liste-scan" id="s-liste"></div>
+</section>
+
+<!-- Terminé -->
+<section class="ecran" id="e-termine">
+  <div class="entete"><div class="fill"><div class="titre">TERMINÉ !</div><div class="sous" id="t-sous"></div></div></div>
+  <div class="termine"><div class="rond">✓</div><div class="grand" id="t-grand"></div><div class="petit">La feuille est marquée<br>« ✓ Scannée » dans l'accueil.</div></div>
+  <div class="bas" style="position:static;background:none;box-shadow:none">
+    <button class="btn vide" id="b-revoir">Revoir les articles</button>
+    <button class="btn plein" id="b-accueil">Retour à l'accueil</button>
+  </div>
+</section>
+
+<div class="voile" id="voile"><div class="fenetre" id="fenetre"></div></div>
+<div id="impression"></div>
+
+<script type="module" src="js/app.js"></script>
+</body>
+</html>

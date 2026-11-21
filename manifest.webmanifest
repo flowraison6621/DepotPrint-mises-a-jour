@@ -1,0 +1,16 @@
+{
+  "name": "Dépôt Prix",
+  "short_name": "Dépôt Prix",
+  "description": "Feuille des changements de prix avec les codes-barres",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#F6F6F6",
+  "theme_color": "#E68A00",
+  "lang": "fr",
+  "icons": [
+    { "src": "icones/icone-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "icones/icone-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}
