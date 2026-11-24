@@ -1,7 +1,7 @@
 {
- "version": "1.38.0",
- "notes": "Étiquettes énergie : option « Autres rayons en 60 × 120 mm », avec alerte pour les TV de 50 pouces ou plus.",
- "url": "https://raw.githubusercontent.com/flowraison6621/DepotPrint-mises-a-jour/main/DepotPrint_1.38.0.zip",
- "sha256": "4053de1da32fa4add9daad996629597dad9e1d4cdceaed7ac436734b7e511ffa",
- "taille": 464546
+ "version": "1.39.0",
+ "notes": "Relevé : nouvelle liste « Accessoires Apple » (marque Apple seulement : chargeurs, câbles, AirPods, AirTag, Apple Pencil, bracelets Apple Watch…).",
+ "url": "https://raw.githubusercontent.com/flowraison6621/DepotPrint-mises-a-jour/main/DepotPrint_1.39.0.zip",
+ "sha256": "dc9ab391a4f8f437f1747090da420e162c93b49ca7a615d7dbb42f84be9ef81d",
+ "taille": 465703
 }
