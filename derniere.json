@@ -1,7 +1,7 @@
 {
- "version": "1.37.5",
- "notes": "Ma sélection : ✏️ et 🔗 Fusionner au passage de la souris ; relevé : une seule sélection pour toutes les listes.",
- "url": "https://raw.githubusercontent.com/flowraison6621/DepotPrint-mises-a-jour/main/DepotPrint_1.37.5.zip",
- "sha256": "14cd7843513a74f1c79fba711bbb73c434b4413a3bd5484af3b16611aa373701",
- "taille": 463297
+ "version": "1.38.0",
+ "notes": "Étiquettes énergie : option « Autres rayons en 60 × 120 mm », avec alerte pour les TV de 50 pouces ou plus.",
+ "url": "https://raw.githubusercontent.com/flowraison6621/DepotPrint-mises-a-jour/main/DepotPrint_1.38.0.zip",
+ "sha256": "4053de1da32fa4add9daad996629597dad9e1d4cdceaed7ac436734b7e511ffa",
+ "taille": 464546
 }
