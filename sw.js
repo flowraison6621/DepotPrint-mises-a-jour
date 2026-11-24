@@ -1,5 +1,5 @@
 // Garde le site et le moteur de lecture dans le téléphone : plus rapide, et marche sans réseau.
-const CACHE = 'depotprix-202611211616'
+const CACHE = 'depotprix-202611241306'
 // la page a besoin de ces en-têtes dès son ouverture : le site se recharge une fois au premier lancement
 self.addEventListener('install', e => { self.skipWaiting() })
 self.addEventListener('activate', e => {
