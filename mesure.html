@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dépôt Prix — mesure</title>
+<meta name="robots" content="noindex, nofollow">
+<style>
+body { margin: 0; font: 16px/1.4 -apple-system, Roboto, Arial, sans-serif; background: #F6F6F6; color: #1A1A1A; }
+header { background: #E68A00; color: #fff; padding: 18px 16px; font-weight: 800; font-size: 22px; }
+main { padding: 16px; max-width: 640px; margin: 0 auto; }
+.btn { display: block; width: 100%; min-height: 52px; border-radius: 12px; border: 1.5px solid #ddd; background: #fff; font: inherit; font-weight: 700; margin-top: 10px; }
+.btn.plein { background: #E68A00; color: #fff; border: 0; }
+.btn:disabled { opacity: .5; }
+label { display: flex; gap: 10px; align-items: center; margin-top: 12px; }
+#journal { white-space: pre-wrap; font: 13px/1.4 ui-monospace, Menlo, monospace; background: #fff; border-radius: 10px; padding: 10px; margin-top: 14px; min-height: 40px; }
+table { border-collapse: collapse; width: 100%; background: #fff; margin-top: 14px; font-size: 14px; }
+td, th { border-bottom: 1px solid #eee; padding: 6px; text-align: right; } td:first-child, th:first-child { text-align: left; }
+.petit { font-size: 12px; color: #666; word-break: break-all; }
+.aide { color: #555; font-size: 14px; }
+</style>
+</head>
+<body>
+<header>Mesure de la vitesse</header>
+<main>
+  <p class="aide">Cette page lit plusieurs fois la même photo de la feuille
+et chronomètre chaque étape, sur ce téléphone.</p>
+  <p class="aide" id="appareil"></p>
+  <button class="btn" id="b-photo">📷 Prendre la feuille en photo</button>
+  <button class="btn" id="b-galerie">🖼️ Choisir une photo déjà prise</button>
+  <input type="file" id="f-photo" accept="image/*" capture="environment" hidden>
+  <input type="file" id="f-galerie" accept="image/*" hidden>
+  <p id="nom-photo" class="aide"></p>
+  <label>Nombre de passages <input id="passages" type="number" value="5" min="1" max="20" style="width:70px;font:inherit"></label>
+  <label><input type="checkbox" id="gpu" checked> Essayer aussi le processeur graphique<br>(télécharge environ 30 Mo la première fois)</label>
+  <button class="btn plein" id="lancer" disabled>Lancer la mesure</button>
+  <div id="journal"></div>
+  <div id="resultats"></div>
+  <button class="btn" id="copier" hidden>📋 Copier les résultats</button>
+</main>
+<script type="module" src="js/mesure.js"></script>
+</body>
+</html>
