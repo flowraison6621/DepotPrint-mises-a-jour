@@ -1,7 +1,7 @@
 {
- "version": "1.41.0",
- "notes": "Relevé : liste « Montres et bracelets connectés », rangée par marque.",
- "url": "https://raw.githubusercontent.com/flowraison6621/DepotPrint-mises-a-jour/main/DepotPrint_1.41.0.zip",
- "sha256": "acc6de5871efb8b95eb0da9b575b5f185d98ab75c19839377f703fc1f00cfb2f",
- "taille": 467333
+ "version": "1.42.0",
+ "notes": "Relevé : option « Une feuille par catégorie » à l'impression",
+ "url": "https://raw.githubusercontent.com/flowraison6621/DepotPrint-mises-a-jour/main/DepotPrint_1.42.0.zip",
+ "sha256": "18685efe338c8fd739e1105eecac5f0f4d1e5310015515a1fa4c6beb7d1344c6",
+ "taille": 467506
 }
