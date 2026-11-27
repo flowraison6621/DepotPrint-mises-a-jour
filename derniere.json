@@ -1,7 +1,7 @@
 {
- "version": "1.40.0",
- "notes": "Relevé : listes « Passerelles multimédia » (Fire TV Stick, Chromecast, Strong…) et « Vidéoprojecteurs », rangées par marque.",
- "url": "https://raw.githubusercontent.com/flowraison6621/DepotPrint-mises-a-jour/main/DepotPrint_1.40.0.zip",
- "sha256": "857ee7ab06e837926ac46f86a922bcfa625b5165cba4c69d948df83f0c491885",
- "taille": 467097
+ "version": "1.41.0",
+ "notes": "Relevé : liste « Montres et bracelets connectés », rangée par marque.",
+ "url": "https://raw.githubusercontent.com/flowraison6621/DepotPrint-mises-a-jour/main/DepotPrint_1.41.0.zip",
+ "sha256": "acc6de5871efb8b95eb0da9b575b5f185d98ab75c19839377f703fc1f00cfb2f",
+ "taille": 467333
 }
