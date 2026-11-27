@@ -1,7 +1,7 @@
 {
- "version": "1.42.0",
- "notes": "Relevé : option « Une feuille par catégorie » à l'impression",
- "url": "https://raw.githubusercontent.com/flowraison6621/DepotPrint-mises-a-jour/main/DepotPrint_1.42.0.zip",
- "sha256": "18685efe338c8fd739e1105eecac5f0f4d1e5310015515a1fa4c6beb7d1344c6",
- "taille": 467506
+ "version": "1.43.0",
+ "notes": "Relevé : noms des listes entiers, bouton « Tout cocher / décocher partout », relevé beaucoup plus rapide",
+ "url": "https://raw.githubusercontent.com/flowraison6621/DepotPrint-mises-a-jour/main/DepotPrint_1.43.0.zip",
+ "sha256": "22d39d5bea6dd1cfe5e24889fde5735fa043287907e87078ebc78fde750f3731",
+ "taille": 469523
 }
